@@ -4,13 +4,20 @@ Basic Instructions to start a new node on Ubuntu Distro. Based on your OS and en
 
 On Ubuntu 18,20,22
 
-1. Create a user ubuntu and provide sudo permission
+User Creation 
+-----------------
+Create a user ubuntu and provide sudo permission
 
 Try not to use root to install. Use ubuntu user to continue with steps below.
 
-2. Open ports 30303, 8545 
+Ports
+-------
+Open ports 30303, 8545 
 
-3. Update distro
+Pre-Requisites
+-----------------
+
+Update distro
 
 
 Ubuntu via PPAs
@@ -42,33 +49,38 @@ Install Go Lang:
   export PATH=$GOPATH/bin:$GOROOT/bin:$PATH
 
 
-4. Clone Repo
-
+Clone Repo
+-----------------
 git clone https://github.com/etheronechain/go-ethereum.git
 cd go-ethereum/
 make geth
 
-5. Download Genesis block and init blockchain
+Genesis Block
+--------------
+
+// Download Genesis block and init blockchain
 
 git clone https://github.com/etheronechain/Genesis.git  
 
-If go-ethereum is in /home/ubuntu/node/go-ethereum/
+// If go-ethereum is in /home/ubuntu/node/go-ethereum/
 
-run this command
+// run this command
 
 ./build/bin/geth init /home/ubuntu/node/go-ethereum/Genesis/genesis.json
 
-6. Start geth to sync to nodes/blockchain
+Start Geth and Node Sync
+----------------- 
+Start geth to sync to nodes/blockchain
 
 ./build/bin/geth --networkid 4949 --port 30303 --http --http.port 8545 --http.addr <Host IP Address> --http.api personal,eth,net --http.corsdomain '*' --allow-insecure-unlock  --syncmode full
 
-7. You can connect to geth to check the sync progress and create new coinbase account in another terminal
+// You can connect to geth to check the sync progress and create new coinbase account in another terminal
 
 ./build/bin/geth attach /home/ubuntu/.ethereum/geth.ipc
 
-for example us the commands below 
+// for example use the commands below 
 
-// use this to connect to seed node
+// use this to connect to seed node in console of geth
 
 admin.addPeer("enode://a6ee2eaca69b93e630e9067b142fc7a803cf6361fd7de03b5071243a69b71b6878a9786b873658eb13345a2e92c62e0ce62e90f8e68bbccd84814fe0b3e90274@165.227.42.184:30303")
 
