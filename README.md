@@ -1,56 +1,34 @@
-# Node_Instructions
+# Ether One Node_Instructions
 
 Basic Instructions to start a new node on Ubuntu Distro. Based on your OS and environment, you may need to make changes.
 
 On Ubuntu 18,20,22
 
-User Creation 
+## User Creation 
 -----------------
 Create a user ubuntu and provide sudo permission
 
 Try not to use root to install. Use ubuntu user to continue with steps below.
 
-Default Ports
+## Default Ports
 --------------
 Open ports 30303, 8545 
 
-Pre-Requisites
+## Pre-Requisites
 -----------------
 
-Update distro
+##Install Go Lang: 
+----------------
 
-
-Ubuntu via PPAs
-The easiest way to install Geth on Ubuntu-based distributions is with the built-in launchpad PPAs (Personal Package Archives). A single PPA repository is provided, containing stable and development releases for Ubuntu versions xenial, trusty, impish, focal, bionic.
-
-The following command enables the launchpad repository:
-
-sudo add-apt-repository -y ppa:ethereum/ethereum
-Then, to install the stable version of go-ethereum:
-
-sudo apt-get update
-sudo apt-get install ethereum
-
-
-sudo apt-get update
-sudo apt-get dist-upgrade
-sudo apt-get install build-essential make
-	
-sudo apt-get install build-essential make git screen unzip curl nginx pkg-config nmap xterm screen tcl -y
-sudo apt-get update && sudo apt-get dist-upgrade -y
-
-Install Go Lang: 
-
-
-
-> cd ..
-> wget https://storage.googleapis.com/golang/go1.19.linux-amd64.tar.gz
-> tar -xvf go1.19.linux-amd64.tar.gz
-> sudo rm -fr /usr/local/go
-> sudo mv go /usr/local
-> export GOROOT=/usr/local/go
-> export PATH=$GOPATH/bin:$GOROOT/bin:$PATH
-
+```bash
+cd ..
+wget https://storage.googleapis.com/golang/go1.19.linux-amd64.tar.gz
+tar -xvf go1.19.linux-amd64.tar.gz
+sudo rm -fr /usr/local/go
+sudo mv go /usr/local
+export GOROOT=/usr/local/go
+export PATH=$GOPATH/bin:$GOROOT/bin:$PATH
+```
 
 Installing Ether One Node 
 ---------------------------
