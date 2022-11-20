@@ -30,6 +30,7 @@ you can switch user using commands below
 
 ```bash
 su ubuntu
+cd ~
 ```
 
 ## Install Go Lang: 
