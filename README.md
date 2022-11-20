@@ -41,15 +41,15 @@ sudo apt-get update && sudo apt-get dist-upgrade -y
 
 Install Go Lang: 
 
-Installing Go
 
- cd ..
- wget https://storage.googleapis.com/golang/go1.19.linux-amd64.tar.gz
- tar -xvf go1.19.linux-amd64.tar.gz
- sudo rm -fr /usr/local/go
- sudo mv go /usr/local
- export GOROOT=/usr/local/go
- export PATH=$GOPATH/bin:$GOROOT/bin:$PATH
+
+> cd ..
+> wget https://storage.googleapis.com/golang/go1.19.linux-amd64.tar.gz
+> tar -xvf go1.19.linux-amd64.tar.gz
+> sudo rm -fr /usr/local/go
+> sudo mv go /usr/local
+> export GOROOT=/usr/local/go
+> export PATH=$GOPATH/bin:$GOROOT/bin:$PATH
 
 
 Installing Ether One Node 
