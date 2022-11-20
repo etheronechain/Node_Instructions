@@ -69,17 +69,17 @@ make geth
 git clone https://github.com/etheronechain/Genesis.git  
 ```
 
-// If go-ethereum is in /home/ubuntu/node/go-ethereum/
+// If go-ethereum is in /home/ubuntu/go-ethereum/
 
 // run this command
 
 ```bash
-./build/bin/geth init /home/ubuntu/node/go-ethereum/Genesis/genesis.json
+./build/bin/geth init /home/ubuntu/go-ethereum/Genesis/genesis.json
 ```
 
 Start Geth and Node Sync
 ----------------- 
-// Start geth to sync to nodes/blockchain in the folder /home/ubuntu/node/go-ethereum/
+// Start geth to sync to nodes/blockchain in the folder /home/ubuntu/go-ethereum/
 
 ```bash
 ./build/bin/geth --networkid 4949 --port 30303 --http --http.port 8545 --http.addr <Host IP Address> --http.api personal,eth,net --http.corsdomain '*' --allow-insecure-unlock  --syncmode full
