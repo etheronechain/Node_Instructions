@@ -97,6 +97,7 @@ git clone https://github.com/etheronechain/Genesis.git
 
 // use this to connect to seed node in console of geth
 
+```bash
 admin.addPeer("enode://a6ee2eaca69b93e630e9067b142fc7a803cf6361fd7de03b5071243a69b71b6878a9786b873658eb13345a2e92c62e0ce62e90f8e68bbccd84814fe0b3e90274@165.227.42.184:30303")
 
 eth.syncing : see sync stats. Displays false when sync is complete
@@ -109,3 +110,4 @@ web3.net.peerCount : see how may peers you are connected to
 
 // run this command to get you enode. Send us this to whitelist
 admin.nodeInfo
+```
