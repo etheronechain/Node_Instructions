@@ -10,8 +10,8 @@ Create a user ubuntu and provide sudo permission
 
 Try not to use root to install. Use ubuntu user to continue with steps below.
 
-Ports
--------
+Default Ports
+--------------
 Open ports 30303, 8545 
 
 Pre-Requisites
@@ -40,19 +40,27 @@ sudo apt-get install build-essential make git screen unzip curl nginx pkg-config
 sudo apt-get update && sudo apt-get dist-upgrade -y
 
 Install Go Lang: 
------------------
-  wget https://go.dev/dl/go1.17.5.linux-amd64.tar.gz
-  sudo tar -xvf go1.17.5.linux-amd64.tar.gz
-  sudo rm -fr /usr/local/go
-  sudo mv go /usr/local
-  export GOROOT=/usr/local/go
-  export PATH=$GOPATH/bin:$GOROOT/bin:$PATH
+
+Installing Go
+
+ cd ..
+ wget https://storage.googleapis.com/golang/go1.19.linux-amd64.tar.gz
+ tar -xvf go1.19.linux-amd64.tar.gz
+ sudo rm -fr /usr/local/go
+ sudo mv go /usr/local
+ export GOROOT=/usr/local/go
+ export PATH=$GOPATH/bin:$GOROOT/bin:$PATH
 
 
+Installing Ether One Node 
+---------------------------
 Clone Repo
 -----------------
 git clone https://github.com/etheronechain/go-ethereum.git
+ls -la
 cd go-ethereum/
+sudo apt-get update && sudo apt-get dist-upgrade -y
+sudo apt-get install build-essential make git screen unzip curl nginx pkg-config nmap xterm screen tcl -y
 make geth
 
 Genesis Block
@@ -70,7 +78,7 @@ git clone https://github.com/etheronechain/Genesis.git
 
 Start Geth and Node Sync
 ----------------- 
-Start geth to sync to nodes/blockchain
+// Start geth to sync to nodes/blockchain in the folder /home/ubuntu/node/go-ethereum/
 
 ./build/bin/geth --networkid 4949 --port 30303 --http --http.port 8545 --http.addr <Host IP Address> --http.api personal,eth,net --http.corsdomain '*' --allow-insecure-unlock  --syncmode full
 
