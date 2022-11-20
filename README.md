@@ -33,10 +33,13 @@ su ubuntu
 cd ~
 ```
 
+
+
 ## Install Go Lang: 
 
+// make sure you are in /home/ubuntu folder
+
 ```bash
-cd ..
 wget https://storage.googleapis.com/golang/go1.19.linux-amd64.tar.gz
 tar -xvf go1.19.linux-amd64.tar.gz
 sudo rm -fr /usr/local/go
