@@ -7,7 +7,15 @@ These instructions are for Ubuntu 18,20,22
 ## User Creation 
 -----------------
 Create a user ubuntu and provide sudo permission
+```bash
+useradd -m ubuntu
+passwd ubuntu
+```
+Make him sudo
 
+```bash
+usermod -aG sudo ubuntu
+```
 Try not to use root to install. Use ubuntu user to continue with steps below.
 
 ## Default Ports
