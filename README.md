@@ -5,7 +5,7 @@ Basic Instructions to start a new node on Ubuntu Distro. Based on your OS and en
 These instructions are for Ubuntu 18,20,22
 
 ## User Creation 
------------------
+
 Create a user ubuntu and provide sudo permission
 ```bash
 useradd -m ubuntu
@@ -49,9 +49,9 @@ export PATH=$GOPATH/bin:$GOROOT/bin:$PATH
 ```
 
 ## Installing Ether One Node 
----------------------------
+
 ## Clone Repo
------------------
+
 ```bash
 git clone https://github.com/etheronechain/go-ethereum.git
 ls -la
@@ -77,13 +77,15 @@ git clone https://github.com/etheronechain/Genesis.git
 ./build/bin/geth init /home/ubuntu/go-ethereum/Genesis/genesis.json
 ```
 
-Start Geth and Node Sync
------------------ 
+## Start Geth and Node Sync
+
 // Start geth to sync to nodes/blockchain in the folder /home/ubuntu/go-ethereum/
 
 ```bash
 ./build/bin/geth --networkid 4949 --port 30303 --http --http.port 8545 --http.addr <Host IP Address> --http.api personal,eth,net --http.corsdomain '*' --allow-insecure-unlock  --syncmode full
 ```
+
+## Connect to console to create coinbase account and run other geth commands
 
 // You can connect to geth to check the sync progress and create new coinbase account in another terminal
 
