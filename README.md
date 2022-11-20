@@ -19,14 +19,20 @@ usermod -aG sudo ubuntu
 Try not to use root to install. Use ubuntu user to continue with steps below.
 
 ## Default Ports
---------------
+
 Open ports 30303, 8545 
 
 ## Pre-Requisites
------------------
+
+you need to switch to ubuntu user to run the commands below
+
+you can switch user using commands below
+
+```bash
+su ubuntu
+```
 
 ## Install Go Lang: 
-----------------
 
 ```bash
 cd ..
@@ -38,9 +44,9 @@ export GOROOT=/usr/local/go
 export PATH=$GOPATH/bin:$GOROOT/bin:$PATH
 ```
 
-Installing Ether One Node 
+## Installing Ether One Node 
 ---------------------------
-Clone Repo
+## Clone Repo
 -----------------
 ```bash
 git clone https://github.com/etheronechain/go-ethereum.git
@@ -51,8 +57,7 @@ sudo apt-get install build-essential make git screen unzip curl nginx pkg-config
 make geth
 ```
 
-Genesis Block
---------------
+## Genesis Block
 
 // Download Genesis block and init blockchain
 
