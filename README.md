@@ -100,6 +100,12 @@ git clone https://github.com/etheronechain/Genesis.git
 ```bash
 admin.addPeer("enode://a6ee2eaca69b93e630e9067b142fc7a803cf6361fd7de03b5071243a69b71b6878a9786b873658eb13345a2e92c62e0ce62e90f8e68bbccd84814fe0b3e90274@165.227.42.184:30303")
 
+or 
+
+```bash
+admin.addPeer("enode://eec65b91b8292fdaae00117886424db8b1a74490c9395dec29ba0d7631f118044591323a3a2882803d84e36b353ccdc110d4d011559a7ef7a978be7c34ebcaad@137.184.44.108:30309")
+
+
 eth.syncing : see sync stats. Displays false when sync is complete
 
 eth.syncing.highestBlock - eth.syncing.currentBlock : see how many blocks your node is behind. Displays NaN when current
