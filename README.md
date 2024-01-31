@@ -98,12 +98,13 @@ git clone https://github.com/etheronechain/Genesis.git
 // use this to connect to seed node in console of geth
 
 ```bash
-admin.addPeer("enode://a6ee2eaca69b93e630e9067b142fc7a803cf6361fd7de03b5071243a69b71b6878a9786b873658eb13345a2e92c62e0ce62e90f8e68bbccd84814fe0b3e90274@165.227.42.184:30303")
 
-or 
+admin.addPeer("enode://fbe3199209f1fa4e18f85c413fab7ad6d2aadb05395e4bc17df5cadede4ff8d4df7f6c143b2bfc29345ac8c7325041444f7731138e5f27897a8e96ef83fc6f23@147.182.240.38:30309")
+
+admin.addPeer("enode://2155d8376d3432ca3e8ec9b8d4090eae538a4fc27d63161491c06ecd1419574758e6cbe20d42e3baedf6c137294df72b032a33ba072de8f3c9febeddb02997c9@170.64.210.155:30309")
+
 
 ```bash
-admin.addPeer("enode://eec65b91b8292fdaae00117886424db8b1a74490c9395dec29ba0d7631f118044591323a3a2882803d84e36b353ccdc110d4d011559a7ef7a978be7c34ebcaad@137.184.44.108:30309")
 
 
 eth.syncing : see sync stats. Displays false when sync is complete
